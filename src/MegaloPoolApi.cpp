@@ -238,6 +238,7 @@ bool MegaloPoolApi::parseTracks(const std::string& body, std::vector<Track>& out
         t.artist = str(item, "artist");
         t.genre = str(item, "genre");
         t.style = str(item, "style");
+        t.album = str(item, "album");
         t.coverUrl = absoluteUrl(str(item, "cover_url"));
         t.duration = (float)num(item, "duration");
         t.bpm = (float)num(item, "bpm");
