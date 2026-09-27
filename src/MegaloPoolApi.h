@@ -21,7 +21,7 @@ struct Folder {
 };
 
 struct Track {
-    std::string id, title, artist, genre, style, coverUrl;
+    std::string id, title, artist, genre, style, album, coverUrl;
     float duration = 0.f;
     float bpm = 0.f;
     int key = 0;       // codage VirtualDJ : 1=Am … 24=G#
