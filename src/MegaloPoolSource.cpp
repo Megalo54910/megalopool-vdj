@@ -63,7 +63,7 @@ void MegaloPoolSource::addTracks(const std::vector<Track>& tracks, IVdjTracksLis
         list->add(t.id.c_str(), t.title.c_str(), t.artist.c_str(),
                   nullptr,                       // remix
                   t.genre.c_str(),
-                  nullptr,                       // label : inconnu (pas de détournement de colonne)
+                  t.album.empty() ? nullptr : t.album.c_str(),  // label : detourne pour l'album
                   comment,
                   t.coverUrl.empty() ? nullptr : t.coverUrl.c_str(),
                   nullptr,                       // flux fourni à la demande (GetStreamUrl)
